@@ -11,7 +11,7 @@ no = ["n", "N", "No", "no"]
 
 # check if attendance file exits
 try:
-    attendance = pd.read_csv('attendance.csv', dtype=str)
+    attendance = pd.read_csv("attendance.csv", dtype=str)
 except Exception as e:
     print(f"Error: {e}\nCreate File 'attendance.csv'? [Y/n]")
     if input() in yes:
@@ -76,7 +76,7 @@ with open(file[0], "r") as f:
 if error == 0:
     print("\nNo Errors")
 else:
-    print(f"\nWARNING: {errors} errors during runtime.\n")
+    print(f"\nWARNING: {error} errors during runtime.\n")
 
 print(attendance)
 
