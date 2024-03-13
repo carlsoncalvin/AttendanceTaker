@@ -65,7 +65,7 @@ with open(file[0], "r") as f:
                     print(f"Multiple hits ({name_count}) on that name. Try again.")
                     error += 1
             else:
-                print(f"{name} submitted outside of class on {date}. Attendance not logged.\n")
+                print(f"{name} submitted outside of class on {date_line}. Attendance not logged.\n")
 
 # save CSV
 if error == 0:
