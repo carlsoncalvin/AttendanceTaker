@@ -13,14 +13,8 @@ no = ["n", "N", "No", "no"]
 try:
     attendance = pd.read_csv("attendance.csv", dtype=str)
 except Exception as e:
-    print(f"Error: {e}\nCreate File 'attendance.csv'? [Y/n]")
-    if input() in yes:
-        with open('attendance.csv', 'w') as file:
-            pass
-        attendance = pd.read_csv("attendance.csv", dtype=str)
-    else:
-        print("\nNo File Created\nTerminating")
-        exit()
+    print(f"Error: {e}\nPlease add a file attendance.csv.")
+    exit()
 
 # get names columns
 names = attendance["First name"] + " " + attendance["Last name"]
