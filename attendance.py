@@ -17,6 +17,7 @@ except Exception as e:
     if input() in yes:
         with open('attendance.csv', 'w') as file:
             pass
+        attendance = pd.read_csv("attendance.csv", dtype=str)
     else:
         print("\nNo File Created\nTerminating")
         exit()
