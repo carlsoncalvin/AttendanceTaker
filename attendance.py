@@ -36,7 +36,7 @@ with open(file[0], "r") as f:
             date = line.split()[2] + " " + line.split()[1]
             break
 
-print(f"Date found: {date}. Is this correct? [Y/n]")
+print(f"Date found: {date}. Is this correct? [Y]/n")
 if input() in yes:
     pass
 else:
@@ -50,13 +50,12 @@ with open(file[0], "r") as f:
     for count, line in enumerate(f):
         name = line.strip()
         if name in names.values:
-            print(name)
             date_line = next(islice(f_iter, 4, 5), '')
             if date_line.startswith("Wednesday"):
                 bool_of_names = names.str.contains(name)
                 name_count = bool_of_names.sum()
                 if name_count == 1:
-                    print(f"Name Found. Attendance logged for {names[names.str.contains(name)].values[0]}\n")
+                    print(f"Name Found. Attendance logged for {names[names.str.contains(name)].values[0]}")
                     attendance.loc[bool_of_names, date] = 1
                 elif name_count == 0:
                     print("\nNo hits on that name. Try again.")
@@ -65,7 +64,7 @@ with open(file[0], "r") as f:
                     print(f"Multiple hits ({name_count}) on that name. Try again.")
                     error += 1
             else:
-                print(f"{name} submitted outside of class on {date_line}. Attendance not logged.\n")
+                print(f"{name} submitted outside of class on {date_line}. Attendance not logged.")
 
 # save CSV
 if error == 0:
@@ -75,7 +74,7 @@ else:
 
 print(attendance)
 
-print("\nSave Modified attendance record? [Y,n]")
+print("\nSave Modified attendance record? [Y],n")
 result = None
 while result is None:
     try:    
