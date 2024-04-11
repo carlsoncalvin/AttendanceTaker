@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-
 import pandas as pd
 import attendance_functions as af
-
-
 
 # check if attendance file exits
 try:
