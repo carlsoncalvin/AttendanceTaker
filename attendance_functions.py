@@ -9,6 +9,7 @@ from itertools import islice
 yes = ["y", "Y", "", "Yes", "yes"]
 no = ["n", "N", "No", "no"]
 
+
 def check_attendance(attendance_df):
     all_names = attendance_df["First name"] + " " + attendance_df["Last name"]
     attend = attendance_df.iloc[:, 6:].astype(int)
@@ -25,6 +26,7 @@ def check_attendance(attendance_df):
     })
 
     print(att_check, "\n")
+
 
 def take_attendance(attendance):
     # get names columns

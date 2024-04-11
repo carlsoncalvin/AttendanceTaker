@@ -32,7 +32,7 @@ while not done:
             af.check_attendance(attendance)
         except Exception as e:
             print(f"Error: {e}")
-    elif response =="4":
+    elif response == "4":
         done = True
     else:
         print("Unrecognized Response\n")
